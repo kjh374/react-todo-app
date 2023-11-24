@@ -73,11 +73,11 @@ const TodoTemplate = () => {
     }
     setTodos(copyTodos);
     */
-    setTodos(
-      todos.map((todo) =>
-        todo.id === id ? { ...todo, done: !todo.done } : todo
-      )
-    );
+    // setTodos(
+    //   todos.map((todo) =>
+    //     todo.id === id ? { ...todo, done: !todo.done } : todo
+    //   )
+    // );
 
     fetch(API_BASE_URL, {
       method: 'PUT',
