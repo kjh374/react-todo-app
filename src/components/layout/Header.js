@@ -10,6 +10,8 @@ const Header = () => {
   // AuthContext에서 로그인 상태를 가져옵니다.
   const { isLoggedIn, userName, onLogout } = useContext(AuthContext);
 
+  // const isLoggedIn = localStorage.getItem('isLoggedIn');
+
   // 로그아웃 핸들러
   const logoutHandler = () => {
     // AuthContext의 onLogout 함수를 호출하여 로그인 상태를 업데이트 합니다.
