@@ -20,6 +20,10 @@ const TodoInput = ({ addTodo }) => {
     e.preventDefault(); // 태그의 기본 기능 제한(submit 막기)
 
     // 부모 컴포넌트가 전달한 함수의 매개값으로 입력값 넘기기.
+    if (todoText.trim().length < 2 || todoText.trim().length > 30) {
+      alert('할 일 입력은 최소 2글자 이상, 30글자 이내로 작성하셔야 합니다!');
+      return;
+    }
     addTodo(todoText);
 
     // 입력이 끝나면 입력창 비우기
